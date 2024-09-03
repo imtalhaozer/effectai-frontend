@@ -5,3 +5,21 @@
 body {
     font-family: 'Suse', sans-serif;
   }
+  
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-size: 4rem;
+  }
+  
+  section {
+    scroll-snap-align: start;
+    min-block-size: 100vh;
+    scroll-snap-stop: always;
+    position: sticky;
+    top: 0;
+  }
