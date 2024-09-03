@@ -19,9 +19,6 @@ const buttons = [
 export const HomeLayer1 = () => {
   return (
     <div className='bg-gradient-to-b from-primary to-secondary h-screen w-screen grid grid-rows-[auto_1fr_auto] grid-cols-1'>
-      <div className='z-10'>
-        <Navbar />
-      </div>
       <div className='flex flex-col items-center justify-center'>
         {texts.map((text, index) => (
           <motion.div
@@ -44,11 +41,11 @@ export const HomeLayer1 = () => {
             rotate: 0,
           }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className='relative z-20' // Mockup için yüksek z-index
+          className=' absolute bottom-[15vh]'
         >
           <img src={mockup} alt="phone-mockup" className='w-[27vw]' />
         </motion.div>
-        <div className='absolute bottom-[10vh] right-[5vw] flex flex-col space-y-4 z-10'>
+        <div className='absolute bottom-[15vh] right-[5vw] flex flex-col space-y-4 z-10'>
           {buttons.map((button, index) => (
             <div
               key={index}
